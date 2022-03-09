@@ -1,0 +1,32 @@
+﻿using System;
+using System.Drawing;
+using GDIDrawer;
+
+namespace Lab4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string secret;
+            int wrong = 0;
+            
+            //name and title
+            Console.WriteLine("\t\t\t\tBerton Quon - Lab 4");
+
+            secret = "computer";
+
+            //load file with strings
+
+            //create GDI drawer window and background image of hangman
+            //CDrawer canvas = new CDrawer();
+
+            //ask user to enter a letter
+            //check to ensure valid letter and not previously played
+            //if letter is accurate, display in word
+            //if letter is inaccurate, display in letters used, add to hangman
+
+            //display 
+        }
+    }
+}

@@ -1,0 +1,61 @@
+﻿using System;
+using System.Drawing;
+using GDIDrawer;
+
+namespace Lab4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string secret;
+            int wrong = 0;
+            string guess;
+            string guessed = "";
+            
+            //name and title
+            Console.WriteLine("\t\t\t\tBerton Quon - Lab 4");
+
+            secret = "computer";
+
+            //load file with strings
+
+            //create GDI drawer window and background image of hangman
+            CDrawer canvas = new CDrawer();
+            DrawScreen(ref canvas);
+
+            //while loop until success or fail 
+
+            //ask user to enter a letter
+            GetGuess(out guess);
+
+            //check to ensure valid letter and not previously played
+            //CheckGuess();
+
+            //if letter is accurate, display in word
+            //if letter is inaccurate, display in letters used, add to hangman
+
+            //display 
+            Console.ReadKey();
+        }
+        static private void DrawScreen(ref CDrawer canvas)
+        {
+            canvas.AddLine(300, 100, 300, 450, Color.Aqua, 5);
+            canvas.AddLine(300, 125, 450, 125, Color.Aqua, 5);
+            canvas.AddLine(300, 150, 325, 125, Color.Aqua, 5);
+            canvas.AddLine(300, 400, 500, 400, Color.Aqua, 5);
+            canvas.AddLine(300, 410, 475, 440, Color.Aqua, 5);
+            canvas.AddLine(300, 440, 475, 410, Color.Aqua, 5);
+            canvas.AddLine(475, 400, 475, 450, Color.Aqua, 5);
+        }
+        static private void GetGuess(out string guess)
+        {
+            Console.WriteLine("Guess a letter: ");
+            guess = Console.ReadLine();
+        }
+        static private void CheckGuess(ref string guess, ref string guesses)
+        {
+
+        }
+    }
+}

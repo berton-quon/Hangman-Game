@@ -1,0 +1,114 @@
+﻿using System;
+using System.Drawing;
+using GDIDrawer;
+
+namespace Lab4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string secret = "computer";
+            int wrong = 0;
+            char guess;
+            string guessed = "";
+            
+            //name and title
+            Console.WriteLine("\t\t\t\tBerton Quon - Lab 4");
+
+            //load file with strings
+
+            //create GDI drawer window and background image of hangman
+            CDrawer canvas = new CDrawer();
+            DrawScreen(ref canvas);
+
+            //while loop until success or fail 
+
+            //ask user to enter a letter
+            GetGuess(out guess);
+
+            //check to ensure valid letter and not previously played
+            CheckGuess(ref guess, ref guessed, ref wrong, secret);
+
+            //if letter is accurate, display in word
+            //if letter is inaccurate, display in letters used, add to hangman
+            //WrongLetter();
+
+
+            //display 
+            Console.ReadKey();
+        }
+        static private void DrawScreen(ref CDrawer canvas)
+        {
+            canvas.AddLine(300, 100, 300, 450, Color.Aqua, 5);
+            canvas.AddLine(300, 125, 450, 125, Color.Aqua, 5);
+            canvas.AddLine(300, 150, 325, 125, Color.Aqua, 5);
+            canvas.AddLine(300, 400, 500, 400, Color.Aqua, 5);
+            canvas.AddLine(300, 410, 475, 440, Color.Aqua, 5);
+            canvas.AddLine(300, 440, 475, 410, Color.Aqua, 5);
+            canvas.AddLine(475, 400, 475, 450, Color.Aqua, 5);
+            canvas.AddLine(400, 125, 400, 175, Color.Brown, 3);
+        }
+        static private void GetGuess(out char guess)
+        {
+            Console.Write("Guess a letter: ");
+            guess = Console.ReadKey();
+        }
+        static private void CheckGuess(ref char guess, ref string guessed, ref int wrong, string word)
+        {
+            bool found = false;     //bool indicating letter is found
+            
+            if (!char.IsLetter(guess)) //check if input was a letter
+            {
+                Console.WriteLine("The character you entered is not a letter.");
+            }
+            foreach (char c in guessed) //check if letter already used
+            {
+                if (c == guess)
+                {
+                    Console.WriteLine("The letter you have entered has already been selected.");
+                }
+            }
+            foreach (char s in word)
+            {
+                if (s == guess)
+                {
+                    //display letter in word
+                    found = true;
+                }
+                if (!found)
+                {
+                    Console.WriteLine($"'{guess}' is not in the word.");
+                    wrong++;
+                }
+            }
+        }
+        static private void WrongGuess(CDrawer canvas, ref int wrong)
+        {
+            if (wrong == 1)
+            {
+
+            }
+            if (wrong == 2)
+            {
+
+            }
+            if (wrong == 3)
+            {
+
+            }
+            if (wrong == 4)
+            {
+
+            }
+            if (wrong == 5)
+            {
+
+            }
+            if (wrong == 6)
+            {
+                Console.WriteLine("You lost.");
+            }
+        }
+    }
+}

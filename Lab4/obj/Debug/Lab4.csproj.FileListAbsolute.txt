@@ -1,0 +1,18 @@
+C:\Users\berto\source\repos\Lab4\Lab4\bin\Debug\Lab4.exe.config
+C:\Users\berto\source\repos\Lab4\Lab4\bin\Debug\Lab4.exe
+C:\Users\berto\source\repos\Lab4\Lab4\bin\Debug\Lab4.pdb
+C:\Users\berto\source\repos\Lab4\Lab4\bin\Debug\GDIDrawer.dll
+C:\Users\berto\source\repos\Lab4\Lab4\obj\Debug\Lab4.csprojAssemblyReference.cache
+C:\Users\berto\source\repos\Lab4\Lab4\obj\Debug\Lab4.csproj.CoreCompileInputs.cache
+C:\Users\berto\source\repos\Lab4\Lab4\obj\Debug\Lab4.csproj.CopyComplete
+C:\Users\berto\source\repos\Lab4\Lab4\obj\Debug\Lab4.exe
+C:\Users\berto\source\repos\Lab4\Lab4\obj\Debug\Lab4.pdb
+E:\Computer Back Up Files\Backed Up Courses\Nait Courses\CMPE 1300 - Fundamentals to Programming\source\repos\Lab4\Lab4\bin\Debug\Lab4.exe.config
+E:\Computer Back Up Files\Backed Up Courses\Nait Courses\CMPE 1300 - Fundamentals to Programming\source\repos\Lab4\Lab4\bin\Debug\Lab4.exe
+E:\Computer Back Up Files\Backed Up Courses\Nait Courses\CMPE 1300 - Fundamentals to Programming\source\repos\Lab4\Lab4\bin\Debug\Lab4.pdb
+E:\Computer Back Up Files\Backed Up Courses\Nait Courses\CMPE 1300 - Fundamentals to Programming\source\repos\Lab4\Lab4\bin\Debug\GDIDrawer.dll
+E:\Computer Back Up Files\Backed Up Courses\Nait Courses\CMPE 1300 - Fundamentals to Programming\source\repos\Lab4\Lab4\obj\Debug\Lab4.csproj.AssemblyReference.cache
+E:\Computer Back Up Files\Backed Up Courses\Nait Courses\CMPE 1300 - Fundamentals to Programming\source\repos\Lab4\Lab4\obj\Debug\Lab4.csproj.CoreCompileInputs.cache
+E:\Computer Back Up Files\Backed Up Courses\Nait Courses\CMPE 1300 - Fundamentals to Programming\source\repos\Lab4\Lab4\obj\Debug\Lab4.csproj.CopyComplete
+E:\Computer Back Up Files\Backed Up Courses\Nait Courses\CMPE 1300 - Fundamentals to Programming\source\repos\Lab4\Lab4\obj\Debug\Lab4.exe
+E:\Computer Back Up Files\Backed Up Courses\Nait Courses\CMPE 1300 - Fundamentals to Programming\source\repos\Lab4\Lab4\obj\Debug\Lab4.pdb

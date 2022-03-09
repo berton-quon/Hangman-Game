@@ -1,0 +1,145 @@
+﻿using System;
+using System.Drawing;
+using GDIDrawer;
+
+namespace Lab4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string secret = "computer";
+            int wrong;
+            char guess;
+            string guessed;
+            string rerun;
+
+            do
+            {
+                //reset variables
+                Console.Clear();
+                wrong = 0;
+                guessed = "";
+
+                //name and title
+                Console.WriteLine("\t\t\t\tBerton Quon - Lab 4");
+
+                //load file with strings
+
+                //create GDI drawer window and background image of hangman
+                CDrawer canvas = new CDrawer();
+                DrawScreen(ref canvas, ref guessed);
+
+                //while loop until success or fail 
+                do
+                {
+                    //ask user to enter a letter
+                    GetGuess(ref canvas, out guess, ref guessed);
+
+                    //check to ensure valid letter and not previously played
+                    CheckGuess(ref guess, ref guessed, ref wrong, secret);
+
+                    //if letter is accurate, display in word
+                    //if letter is inaccurate, display in letters used, add to hangman
+                    WrongGuess(ref canvas, ref wrong);
+                } while (wrong < 6);
+
+                //display 
+
+                //ask user to rerun program
+                Console.Write("\nWould you like to play again? Yes/No: ");
+                rerun = Console.ReadLine().ToLower();
+                if (rerun == "yes")
+                    canvas.Close();      //close canvas
+                
+            } while (rerun == "yes");
+
+        }
+        static private void DrawScreen(ref CDrawer canvas, ref string guessed)
+        {
+            //add background image
+            canvas.AddLine(300, 100, 300, 450, Color.Aqua, 5);
+            canvas.AddLine(300, 125, 450, 125, Color.Aqua, 5);
+            canvas.AddLine(300, 150, 325, 125, Color.Aqua, 5);
+            canvas.AddLine(300, 400, 500, 400, Color.Aqua, 5);
+            canvas.AddLine(300, 410, 475, 440, Color.Aqua, 5);
+            canvas.AddLine(300, 440, 475, 410, Color.Aqua, 5);
+            canvas.AddLine(475, 400, 475, 450, Color.Aqua, 5);
+            canvas.AddLine(400, 125, 400, 175, Color.Brown, 3);
+            
+        }
+
+        static private void GetGuess(ref CDrawer canvas, out char guess, ref string guessed)
+        {
+            bool retry;
+            bool inputWrong;
+            string input;
+            
+            do
+            {
+                retry = false;
+
+                Console.Write("\nGuess a letter: ");
+                input = Console.ReadLine();
+                inputWrong = char.TryParse(input, out guess); //ensure only a single character was inputted
+                while (!char.IsLetter(guess))      //check if input was a letter
+                {
+                    Console.WriteLine("The character you entered is not a letter.");
+                    Console.Write("\nGuess a letter: ");
+                    guess = char.Parse(Console.ReadLine());
+                }
+                foreach (char c in guessed)     //check if letter has already been guessed
+                {
+                    if (c == guess)
+                    {
+                        Console.WriteLine("The letter you have entered has already been selected.");
+                        retry = true;
+                    }
+                }
+            }
+            while (retry);
+            guessed = guessed + guess;
+            Console.WriteLine($"Letters used: {guessed}");
+            //canvas.AddText($"Letters used: {guessed}", 15, 0, 40, 500, 30, Color.White);
+            
+        }
+        static private void CheckGuess(ref char guess, ref string guessed, ref int wrong, string word)
+        {
+            bool found = false;     //bool indicating letter is found
+
+            foreach (char s in word)
+            {
+                if (s == guess)
+                {
+                    //display letter in word
+                    found = true;
+                }
+            }
+            if (!found)
+            {
+                Console.WriteLine($"'{guess}' is not in the word.");
+                wrong++; //add to wrong counter - determines what part of hangman to draw
+            }    
+        }
+        static private void WrongGuess(ref CDrawer canvas, ref int wrong)
+        {
+            //draw appropriate part of hangman depending on how many wrong letters have been chosen 
+            if (wrong == 1)
+                canvas.AddCenteredEllipse(400, 185, 20, 20, Color.Yellow);      //head
+            if (wrong == 2)
+                canvas.AddCenteredEllipse(400, 230, 20, 70, Color.Yellow);      //body
+            if (wrong == 3)
+                canvas.AddLine(390, 210, 370, 230, Color.Yellow, 3);            //arm
+            if (wrong == 4)
+                canvas.AddLine(410, 210, 430, 230, Color.Yellow, 3);            //arm
+            if (wrong == 5)
+                canvas.AddLine(390, 250, 390, 290, Color.Yellow, 3);            //leg
+            if (wrong == 6)
+            {
+                canvas.AddLine(410, 250, 410, 290, Color.Yellow, 3);            //leg
+                canvas.AddText("You Lose!", 80, Color.Blue);
+                Console.WriteLine("You lose.");
+            }
+        }
+    }
+}
