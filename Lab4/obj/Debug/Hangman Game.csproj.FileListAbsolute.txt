@@ -1,0 +1,7 @@
+D:\GitHub Projects\Hangman Game\Lab4\bin\Debug\Lab4.exe.config
+D:\GitHub Projects\Hangman Game\Lab4\bin\Debug\Lab4.exe
+D:\GitHub Projects\Hangman Game\Lab4\bin\Debug\Lab4.pdb
+D:\GitHub Projects\Hangman Game\Lab4\obj\Debug\Hangman Game.csproj.CoreCompileInputs.cache
+D:\GitHub Projects\Hangman Game\Lab4\obj\Debug\Hangman Game.csproj.CopyComplete
+D:\GitHub Projects\Hangman Game\Lab4\obj\Debug\Lab4.exe
+D:\GitHub Projects\Hangman Game\Lab4\obj\Debug\Lab4.pdb

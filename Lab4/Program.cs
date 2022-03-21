@@ -3,7 +3,7 @@ using System.Drawing;
 using GDIDrawer;
 using System.IO;
 
-namespace Lab4
+namespace Hangman
 {
     class Program
     {
