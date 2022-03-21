@@ -29,7 +29,7 @@ namespace Lab4
                 displayed = "";
 
                 //name and title
-                Console.WriteLine("\t\t\t\tBerton Quon - Lab 4");
+                Console.WriteLine("\t\t\t\tHangman Game");
 
                 //load file with strings
                 StreamReader wordFile;                              

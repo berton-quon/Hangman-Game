@@ -16,3 +16,11 @@ E:\Computer Back Up Files\Backed Up Courses\Nait Courses\CMPE 1300 - Fundamental
 E:\Computer Back Up Files\Backed Up Courses\Nait Courses\CMPE 1300 - Fundamentals to Programming\source\repos\Lab4\Lab4\obj\Debug\Lab4.csproj.CopyComplete
 E:\Computer Back Up Files\Backed Up Courses\Nait Courses\CMPE 1300 - Fundamentals to Programming\source\repos\Lab4\Lab4\obj\Debug\Lab4.exe
 E:\Computer Back Up Files\Backed Up Courses\Nait Courses\CMPE 1300 - Fundamentals to Programming\source\repos\Lab4\Lab4\obj\Debug\Lab4.pdb
+D:\GitHub Projects\Hangman Game\Lab4\bin\Debug\Lab4.exe.config
+D:\GitHub Projects\Hangman Game\Lab4\bin\Debug\Lab4.exe
+D:\GitHub Projects\Hangman Game\Lab4\bin\Debug\Lab4.pdb
+D:\GitHub Projects\Hangman Game\Lab4\obj\Debug\Lab4.csproj.AssemblyReference.cache
+D:\GitHub Projects\Hangman Game\Lab4\obj\Debug\Lab4.csproj.CoreCompileInputs.cache
+D:\GitHub Projects\Hangman Game\Lab4\obj\Debug\Lab4.csproj.CopyComplete
+D:\GitHub Projects\Hangman Game\Lab4\obj\Debug\Lab4.exe
+D:\GitHub Projects\Hangman Game\Lab4\obj\Debug\Lab4.pdb
