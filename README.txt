@@ -1,3 +1,6 @@
+Hangman Game
+Author: Berton Quon
+
 Steps to run game
 1. Download Hangman.zip
 2. Unzip contents from zip folder
